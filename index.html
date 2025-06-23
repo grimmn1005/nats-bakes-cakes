@@ -6,6 +6,9 @@
     <title>Nat's Bakes & Cakes</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
     <style>
+      body {
+        font-family: sans-serif;
+      }
       .image-grid img {
         cursor: pointer;
         transition: transform 0.2s ease;
@@ -33,17 +36,15 @@
       .divider {
         width: 80%;
         margin: 2rem auto;
-        height: 24px;
-        background-image: url('natsbakescakesimages/frostingdivider.png');
-        background-repeat: repeat-x;
-        background-size: contain;
-        background-color: transparent;
+        border-top: 5px dotted;
+        border-image: repeating-linear-gradient(90deg, #fcd34d 0 10px, #f9a8d4 10px 20px, #a5f3fc 20px 30px, #fcd34d 30px 40px) 1;
+        height: 0;
       }
     </style>
   </head>
-  <body class="bg-gradient-to-b from-yellow-50 to-white font-sans text-gray-800">
+  <body class="bg-gradient-to-b from-yellow-100 to-white font-sans text-gray-800">
     <!-- Navigation -->
-    <nav class="bg-yellow-200 py-4 shadow-md">
+    <nav class="bg-yellow-100 py-4 shadow-md">
       <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
         <h1 class="text-xl font-bold">🍰 Nat's Bakes & Cakes</h1>
         <div class="space-x-4">
@@ -79,7 +80,7 @@
 
     <!-- Image Grid -->
     <section class="py-6">
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 image-grid w-[5in] mx-auto">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 image-grid w-[4.75in] mx-auto">
         <img src="natsbakescakesimages/1989tvcake.png" alt="1989 TV Cake" class="rounded-lg" onclick="openImage(this.src)" />
         <img src="natsbakescakesimages/4thcake.png" alt="4th of July Cake" class="rounded-lg" onclick="openImage(this.src)" />
         <img src="natsbakescakesimages/4thicecreamcake.png" alt="Ice Cream Cake" class="rounded-lg" onclick="openImage(this.src)" />
