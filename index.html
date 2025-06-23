@@ -30,11 +30,19 @@
         cursor: pointer;
         box-shadow: 0 2px 4px rgba(0,0,0,0.2);
       }
+      .divider {
+        width: 80%;
+        margin: 2rem auto;
+        height: 12px;
+        background: url('https://www.transparenttextures.com/patterns/cream-pixels.png');
+        background-repeat: repeat-x;
+        background-size: contain;
+      }
     </style>
   </head>
-  <body class="bg-gradient-to-b from-pink-100 to-white font-sans text-gray-800">
+  <body class="bg-gradient-to-b from-yellow-100 to-white font-sans text-gray-800">
     <!-- Navigation -->
-    <nav class="bg-pink-200 py-4 shadow-md">
+    <nav class="bg-yellow-200 py-4 shadow-md">
       <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
         <h1 class="text-xl font-bold">🍰 Nat's Bakes & Cakes</h1>
         <div class="space-x-4">
@@ -52,13 +60,42 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-orange-100 text-center py-8">
+    <section class="bg-yellow-100 text-center py-8">
       <h2 class="text-2xl font-bold text-brown-700 mb-4">Sweet artistry baked fresh in every batch</h2>
       <div class="flex justify-center">
         <img src="natsbakescakesimages/xocupcake.png" alt="Cupcakes" class="rounded-xl w-2/3 max-w-md h-auto object-contain" />
       </div>
       <p class="mt-4 text-sm">Custom cakes and cupcakes made with love for your special occasions</p>
     </section>
+
+    <div class="divider"></div>
+
+    <!-- Gallery Title -->
+    <section id="gallery" class="text-center py-6">
+      <h2 class="text-3xl font-bold">🎂 Gallery</h2>
+    </section>
+
+    <!-- Image Grid -->
+    <section class="py-6">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 image-grid w-[5in] mx-auto">
+        <img src="natsbakescakesimages/1989tvcake.png" alt="1989 TV Cake" class="rounded-lg" onclick="openImage(this.src)" />
+        <img src="natsbakescakesimages/4thcake.png" alt="4th of July Cake" class="rounded-lg" onclick="openImage(this.src)" />
+        <img src="natsbakescakesimages/4thicecreamcake.png" alt="Ice Cream Cake" class="rounded-lg" onclick="openImage(this.src)" />
+        <img src="natsbakescakesimages/angiecake.png" alt="Angie Cake" class="rounded-lg" onclick="openImage(this.src)" />
+        <img src="natsbakescakesimages/bavariancake.png" alt="Bavarian Cake" class="rounded-lg" onclick="openImage(this.src)" />
+        <img src="natsbakescakesimages/cmccake.png" alt="CMC Cake" class="rounded-lg" onclick="openImage(this.src)" />
+        <img src="natsbakescakesimages/collegecupcakes.png" alt="College Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
+        <img src="natsbakescakesimages/eastercake.png" alt="Easter Cake" class="rounded-lg" onclick="openImage(this.src)" />
+        <img src="natsbakescakesimages/halloweencupcake.png" alt="Halloween Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
+        <img src="natsbakescakesimages/stripecake.png" alt="Stripe Cake" class="rounded-lg" onclick="openImage(this.src)" />
+        <img src="natsbakescakesimages/sunflowercake.png" alt="Sunflower Cake" class="rounded-lg" onclick="openImage(this.src)" />
+        <img src="natsbakescakesimages/ukrainecupcakes.png" alt="Ukraine Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
+        <img src="natsbakescakesimages/washucake.png" alt="Wash U Cake" class="rounded-lg col-span-2 mx-auto" onclick="openImage(this.src)" />
+        <img src="natsbakescakesimages/wrigleyfieldcake.png" alt="Wrigley Cake" class="rounded-lg col-span-2 mx-auto" onclick="openImage(this.src)" />
+      </div>
+    </section>
+
+    <div class="divider"></div>
 
     <!-- Meet Natalie Section -->
     <section id="meet" class="bg-blue-50 py-10 px-6">
@@ -68,57 +105,33 @@
           <h2 class="text-3xl font-bold">Meet Natalie</h2>
         </div>
         <div class="text-center max-w-3xl mx-auto">
-          <p class="mb-4">
-            I'm currently a junior in college on the pre-med track, but baking has always been my creative outlet.
-            Inspired by a childhood babysitter, I started experimenting with cupcakes back in elementary school and never stopped.
-          </p>
-          <p class="mb-4">
-            In high school I was a founder and president of a baking club (Cupcakes For Creators), and I've supplied cupcakes
-            for numerous fundraising events since then. This summer I'm turning my passion into a side-hustle—pouring heart
-            (and plenty of buttercream) into personalized cupcakes and cakes that make every celebration a little sweeter.
-          </p>
-          <p>
-            From birthday parties to graduation celebrations, I love creating custom designs that reflect your unique style and
-            taste preferences. Every order is made fresh with premium ingredients and decorated with meticulous attention to detail.
-          </p>
-        </div>
-
-        <!-- Image Grid -->
-        <div id="gallery" class="grid grid-cols-2 sm:grid-cols-4 gap-4 image-grid mt-8 w-[5in] mx-auto">
-          <img src="natsbakescakesimages/1989tvcake.png" alt="1989 TV Cake" class="rounded-lg" onclick="openImage(this.src)" />
-          <img src="natsbakescakesimages/4thcake.png" alt="4th of July Cake" class="rounded-lg" onclick="openImage(this.src)" />
-          <img src="natsbakescakesimages/4thicecreamcake.png" alt="Ice Cream Cake" class="rounded-lg" onclick="openImage(this.src)" />
-          <img src="natsbakescakesimages/angiecake.png" alt="Angie Cake" class="rounded-lg" onclick="openImage(this.src)" />
-          <img src="natsbakescakesimages/bavariancake.png" alt="Bavarian Cake" class="rounded-lg" onclick="openImage(this.src)" />
-          <img src="natsbakescakesimages/cmccake.png" alt="CMC Cake" class="rounded-lg" onclick="openImage(this.src)" />
-          <img src="natsbakescakesimages/collegecupcakes.png" alt="College Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
-          <img src="natsbakescakesimages/eastercake.png" alt="Easter Cake" class="rounded-lg" onclick="openImage(this.src)" />
-          <img src="natsbakescakesimages/halloweencupcake.png" alt="Halloween Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
-          <img src="natsbakescakesimages/stripecake.png" alt="Stripe Cake" class="rounded-lg" onclick="openImage(this.src)" />
-          <img src="natsbakescakesimages/sunflowercake.png" alt="Sunflower Cake" class="rounded-lg" onclick="openImage(this.src)" />
-          <img src="natsbakescakesimages/ukrainecupcakes.png" alt="Ukraine Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
-          <img src="natsbakescakesimages/washucake.png" alt="Wash U Cake" class="rounded-lg col-span-2 mx-auto" onclick="openImage(this.src)" />
-          <img src="natsbakescakesimages/wrigleyfieldcake.png" alt="Wrigley Cake" class="rounded-lg col-span-2 mx-auto" onclick="openImage(this.src)" />
+          <p class="mb-4">I'm currently a junior in college on the pre-med track, but baking has always been my creative outlet. Inspired by a childhood babysitter, I started experimenting with cupcakes back in elementary school and never stopped.</p>
+          <p class="mb-4">In high school I was a founder and president of a baking club (Cupcakes For Creators), and I've supplied cupcakes for numerous fundraising events since then. This summer I'm turning my passion into a side-hustle—pouring heart (and plenty of buttercream) into personalized cupcakes and cakes that make every celebration a little sweeter.</p>
+          <p>From birthday parties to graduation celebrations, I love creating custom designs that reflect your unique style and taste preferences. Every order is made fresh with premium ingredients and decorated with meticulous attention to detail.</p>
         </div>
       </div>
     </section>
+
+    <div class="divider"></div>
 
     <!-- Order Form -->
     <section id="orderform" class="bg-yellow-50 py-10 px-6">
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="text-3xl font-bold mb-4">📝 Order Form</h2>
         <p class="mb-4">Ready to place an order? Click below to fill out the request form!</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8Km8GujFEmy8JSuzO0iPtGfZ9fcn2Sf9E5HCixTHX3FgBZA/viewform?usp=header" target="_blank" class="inline-block px-6 py-3 bg-pink-400 text-white font-semibold rounded hover:bg-pink-500 transition">Order Now</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8Km8GujFEmy8JSuzO0iPtGfZ9fcn2Sf9E5HCixTHX3FgBZA/viewform?usp=header" target="_blank" class="inline-block px-6 py-3 bg-yellow-400 text-white font-semibold rounded hover:bg-yellow-500 transition">Order Now</a>
       </div>
     </section>
 
+    <div class="divider"></div>
+
     <!-- Contact Section -->
     <section id="contact" class="bg-blue-50 py-12 px-6">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-6">📧 Reach Out & Inquire</h2>
-        <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
-          <img src="natsbakescakesimages/ngcakesinsta.png" alt="Instagram screenshot" style="width:1in;height:auto;" class="rounded-xl" />
-          <div class="text-center md:text-left">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">📧 Reach Out & Inquire</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+          <img src="natsbakescakesimages/ngcakesinsta.png" alt="Instagram screenshot" style="width:1.76in; height:auto;" class="rounded-xl" />
+          <div>
             <p class="mb-2"><strong>Text Message</strong><br />(203) 945-8014</p>
             <p class="mb-2"><strong>Instagram DM</strong><br />@nats_bakes_cakes</p>
             <p class="mb-4"><strong>Email</strong><br />negrimm1005@gmail.com</p>
@@ -130,7 +143,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="text-center text-sm py-6 text-gray-500">© 2025 Nat's Bakes & Cakes</footer>
 
     <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to Top</button>
