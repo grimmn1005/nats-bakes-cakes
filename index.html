@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
-        font-family: sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: #FFFFF0;
       }
       .image-grid img {
@@ -42,6 +42,24 @@
         border-color: transparent;
         border-image: repeating-linear-gradient(90deg, #FDFD96 0 10px, #f9a8d4 10px 20px, #a5f3fc 20px 30px, #FDFD96 30px 40px) 1;
         height: 0;
+      }
+      a {
+        color: #333;
+        font-weight: 500;
+      }
+      a:hover {
+        color: #FF69B4;
+      }
+      .btn-primary {
+        background-color: #FDFD96;
+        color: #333;
+        padding: 0.75rem 1.5rem;
+        font-weight: 600;
+        border-radius: 0.5rem;
+        transition: background-color 0.2s ease;
+      }
+      .btn-primary:hover {
+        background-color: #ffe680;
       }
     </style>
   </head>
@@ -107,23 +125,9 @@
       </div>
     </section>
 
-    <script>
-      const menuBtn = document.getElementById('menuBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
+    <div class="divider"></div>
 
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-
-      function openImage(src) {
-        const win = window.open();
-        win.document.write(`<img src="${src}" style="width:100%" />`);
-      }
-    </script>
-  </body>
-</html>
-
-    <!-- Meet Natalie Section -->
+    <!-- Meet Natalie -->
     <section id="meet" class="bg-blue-50 py-10 px-6">
       <div class="max-w-5xl mx-auto">
         <div class="flex items-center justify-center mb-8">
@@ -174,10 +178,17 @@
     <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to Top</button>
 
     <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
       function openImage(src) {
         const win = window.open();
         win.document.write(`<img src="${src}" style="width:100%" />`);
       }
+
       window.onscroll = function () {
         document.getElementById('backToTopBtn').style.display = window.scrollY > 300 ? 'block' : 'none';
       };
