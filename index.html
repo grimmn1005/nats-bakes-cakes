@@ -1,150 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nat's Bakes & Cakes</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #fff; color: #333; }
-    header { background-color: #f8e8e8; padding: 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5em; }
-    header p { margin: 5px 0 0; font-size: 1.2em; }
-    .cover {
-      background-color: #fff0e0;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .cover h2 {
-      font-size: 2em;
-      color: #8b4513;
-    }
-    .cover img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-    }
-    .cover p {
-      font-size: 1.1em;
-      color: #444;
-      margin-top: 10px;
-    }
-    .about {
-      padding: 40px 20px;
-      background-color: #f7f9fb;
-      color: #444;
-    }
-    .about h2 {
-      font-size: 2em;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .about img {
-      float: right;
-      margin-left: 20px;
-      max-width: 200px;
-      border-radius: 8px;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      padding: 20px;
-    }
-    .gallery img {
-      max-width: 200px;
-      height: auto;
-      border: 2px solid #ccc;
-      border-radius: 5px;
-    }
-    .contact {
-      padding: 40px 20px;
-      background-color: #f7f9fb;
-      color: #444;
-      text-align: center;
-    }
-    .contact h2 {
-      font-size: 2em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-    .contact img {
-      max-width: 300px;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-    .contact p {
-      margin: 5px 0;
-    }
-    .contact .notice {
-      background-color: #e0f7ff;
-      padding: 10px;
-      margin-top: 15px;
-      border-radius: 5px;
-      display: inline-block;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      font-size: 0.9em;
-      color: #555;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Nat's Bakes & Cakes 🍰</h1>
-    <p>Summer 2025 custom cupcake &amp; cake orders.</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nat's Bakes & Cakes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <style>
+      .image-grid img {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+      .image-grid img:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-b from-pink-100 to-white font-sans text-gray-800">
+    <!-- Header -->
+    <header class="text-center py-8">
+      <h1 class="text-4xl font-bold">Nat's Bakes & Cakes 🍰</h1>
+      <p class="text-sm">Summer 2025 custom cupcake & cake orders.</p>
+    </header>
 
-  <section class="cover">
-    <h2>Sweet artistry baked fresh in every batch</h2>
-    <img src="natsbakescakesimages/xocupcake.png" alt="Chi O Cupcakes" />
-    <p>Custom cakes and cupcakes made with love for your special occasions</p>
-  </section>
+    <!-- Hero Section -->
+    <section class="bg-orange-100 text-center py-8">
+      <h2 class="text-2xl font-bold text-brown-700 mb-4">Sweet artistry baked fresh in every batch</h2>
+      <div class="flex justify-center">
+        <img src="natsbakescakesimages/xocupcake.png" alt="Cupcakes" class="rounded-xl w-2/3 max-w-md h-auto" />
+      </div>
+      <p class="mt-4 text-sm">Custom cakes and cupcakes made with love for your special occasions</p>
+    </section>
 
-  <section class="about">
-    <h2>👩‍🍳 Meet Natalie</h2>
-    <img src="natsbakescakesimages/negheadshot.png" alt="Natalie Headshot" />
-    <p>I'm currently a junior in college on the pre-med track, but baking has always been my creative outlet. Inspired by a childhood babysitter, I started experimenting with cupcakes back in elementary school and never stopped.</p>
-    <p>In high school I was a founder and president of a baking club (Cupcakes For Creators), and I've supplied cupcakes for numerous fundraising events since then. This summer I'm turning my passion into a side-hustle—pouring heart (and plenty of buttercream) into personalized cupcakes and cakes that make every celebration a little sweeter.</p>
-    <p>From birthday parties to graduation celebrations, I love creating custom designs that reflect your unique style and taste preferences. Every order is made fresh with premium ingredients and decorated with meticulous attention to detail.</p>
-  </section>
+    <!-- Meet Natalie Section -->
+    <section class="bg-blue-50 py-10 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-start justify-center mb-8">
+          <img src="natsbakescakesimages/negheadshot.png" alt="Natalie" class="w-32 h-auto mr-6 rounded-xl" />
+          <div>
+            <h2 class="text-3xl font-bold text-center mb-4">👩‍🍳 Meet Natalie</h2>
+            <p class="mb-4">
+              I'm currently a junior in college on the pre-med track, but baking has always been my creative outlet.
+              Inspired by a childhood babysitter, I started experimenting with cupcakes back in elementary school and never stopped.
+            </p>
+            <p class="mb-4">
+              In high school I was a founder and president of a baking club (Cupcakes For Creators), and I've supplied cupcakes
+              for numerous fundraising events since then. This summer I'm turning my passion into a side-hustle—pouring heart
+              (and plenty of buttercream) into personalized cupcakes and cakes that make every celebration a little sweeter.
+            </p>
+            <p>
+              From birthday parties to graduation celebrations, I love creating custom designs that reflect your unique style and
+              taste preferences. Every order is made fresh with premium ingredients and decorated with meticulous attention to detail.
+            </p>
+          </div>
+        </div>
 
-  <div class="gallery">
-    <img src="natsbakescakesimages/1989tvcake.png" alt="1989 TV Cake">
-    <img src="natsbakescakesimages/4thcake.png" alt="4th of July Cake">
-    <img src="natsbakescakesimages/4thicecreamcake.png" alt="4th Ice Cream Cake">
-    <img src="natsbakescakesimages/angiecake.png" alt="Angie Cake">
-    <img src="natsbakescakesimages/bavariancake.png" alt="Bavarian Cake">
-    <img src="natsbakescakesimages/cmccake.png" alt="CMC Cake">
-    <img src="natsbakescakesimages/collegecupcakes.png" alt="College Cupcakes">
-    <img src="natsbakescakesimages/eastercake.png" alt="Easter Cake">
-    <img src="natsbakescakesimages/halloweencupcake.png" alt="Halloween Cupcakes">
-    <img src="natsbakescakesimages/stripecake.png" alt="Striped Cake">
-    <img src="natsbakescakesimages/sunflowercake.png" alt="Sunflower Cake">
-    <img src="natsbakescakesimages/ukrainecupcakes.png" alt="Ukraine Cupcakes">
-    <img src="natsbakescakesimages/washucake.png" alt="WashU Cake">
-    <img src="natsbakescakesimages/wrigleyfieldcake.png" alt="Wrigley Field Cake">
-    <img src="natsbakescakesimages/xocupcake.png" alt="XO Cupcake">
-  </div>
+        <!-- Image Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 image-grid">
+          <img src="natsbakescakesimages/1989tvcake.png" alt="1989 TV Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/4thcake.png" alt="4th of July Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/4thicecreamcake.png" alt="Ice Cream Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/angiecake.png" alt="Angie Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/bavariancake.png" alt="Bavarian Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/cmccake.png" alt="CMC Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/collegecupcakes.png" alt="College Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/eastercake.png" alt="Easter Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/halloweencupcake.png" alt="Halloween Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/ohioStatecake.png" alt="Ohio State Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/stripecake.png" alt="Stripe Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/sunflowercake.png" alt="Sunflower Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/ukrainecupcakes.png" alt="Ukraine Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/washucake.png" alt="Wash U Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/wrigleyfieldcake.png" alt="Wrigley Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/xocupcake.png" alt="XO Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
+        </div>
+      </div>
+    </section>
 
-  <section class="contact">
-    <h2>📧 Reach Out & Inquire</h2>
-    <img src="natsbakescakesimages/ngcakesinsta.png" alt="Instagram contact screenshot">
-    <p><strong>Text Message</strong><br>(203) 945-8014</p>
-    <p><strong>Instagram DM</strong><br>@nats_bakes_cakes</p>
-    <p><strong>Email</strong><br>negrimm1005@gmail.com</p>
-    <div class="notice">
-      🕐 <strong>Planning ahead?</strong> Kindly give at least <strong>5 days' notice</strong> so I can perfect your order!
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section class="bg-blue-50 py-12 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-6">📧 Reach Out & Inquire</h2>
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+          <img src="natsbakescakesimages/ngcakesinsta.png" alt="Instagram screenshot" class="w-full md:w-1/2 rounded-xl" />
+          <div class="text-center md:text-left">
+            <p class="mb-2"><strong>Text Message</strong><br />(203) 945-8014</p>
+            <p class="mb-2"><strong>Instagram DM</strong><br />@nats_bakes_cakes</p>
+            <p class="mb-4"><strong>Email</strong><br />negrimm1005@gmail.com</p>
+            <div class="bg-blue-100 text-blue-900 px-4 py-2 rounded-lg inline-block">
+              <strong>🕒 Planning ahead?</strong> Kindly give at least <strong>5 days' notice</strong> so I can perfect your order!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    &copy; 2025 Nat's Bakes & Cakes
-  </footer>
-</body>
+    <!-- Footer -->
+    <footer class="text-center text-sm py-6 text-gray-500">© 2025 Nat's Bakes & Cakes</footer>
+
+    <script>
+      function openImage(src) {
+        const win = window.open();
+        win.document.write(`<img src="${src}" style="width:100%" />`);
+      }
+    </script>
+  </body>
 </html>
