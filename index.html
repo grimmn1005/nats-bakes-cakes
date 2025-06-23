@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nat's Bakes & Cakes</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
         font-family: sans-serif;
@@ -38,7 +39,7 @@
         width: 80%;
         margin: 2rem auto;
         border-top: 5px dotted;
-        border-color: #FDFD96;
+        border-color: transparent;
         border-image: repeating-linear-gradient(90deg, #FDFD96 0 10px, #f9a8d4 10px 20px, #a5f3fc 20px 30px, #FDFD96 30px 40px) 1;
         height: 0;
       }
@@ -47,14 +48,27 @@
   <body class="font-sans text-gray-800">
     <!-- Navigation -->
     <nav class="bg-[#FFFFF0] py-4 shadow-md">
-      <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
+      <div class="max-w-5xl mx-auto px-4 flex items-center justify-between">
         <h1 class="text-xl font-bold">🍰 Nat's Bakes & Cakes</h1>
-        <div class="space-x-4">
+        <div class="md:hidden">
+          <button id="menuBtn" class="focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+        <div id="navLinks" class="hidden md:flex space-x-4">
           <a href="#gallery" class="hover:underline">Gallery</a>
           <a href="#meet" class="hover:underline">Meet Natalie</a>
           <a href="#orderform" class="hover:underline">Order Form</a>
           <a href="#contact" class="hover:underline">Contact</a>
         </div>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden flex-col items-start px-4 pt-2 pb-4 space-y-2">
+        <a href="#gallery" class="block hover:underline">Gallery</a>
+        <a href="#meet" class="block hover:underline">Meet Natalie</a>
+        <a href="#orderform" class="block hover:underline">Order Form</a>
+        <a href="#contact" class="block hover:underline">Contact</a>
       </div>
     </nav>
 
@@ -75,26 +89,39 @@
 
     <div class="divider"></div>
 
-    <!-- Gallery Section (title and grid together) -->
+    <!-- Gallery Section -->
     <section id="gallery" class="text-center py-6">
       <h2 class="text-3xl font-bold mb-6">🎂 Gallery</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 image-grid" style="width: 4.75in; margin: 0 auto;">
-        <img src="natsbakescakesimages/1989tvcake.png" alt="1989 TV Cake" class="rounded-lg" onclick="openImage(this.src)" />
-        <img src="natsbakescakesimages/4thcake.png" alt="4th of July Cake" class="rounded-lg" onclick="openImage(this.src)" />
-        <img src="natsbakescakesimages/4thicecreamcake.png" alt="Ice Cream Cake" class="rounded-lg" onclick="openImage(this.src)" />
-        <img src="natsbakescakesimages/angiecake.png" alt="Angie Cake" class="rounded-lg" onclick="openImage(this.src)" />
-        <img src="natsbakescakesimages/bavariancake.png" alt="Bavarian Cake" class="rounded-lg" onclick="openImage(this.src)" />
-        <img src="natsbakescakesimages/cmccake.png" alt="CMC Cake" class="rounded-lg" onclick="openImage(this.src)" />
-        <img src="natsbakescakesimages/collegecupcakes.png" alt="College Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
-        <img src="natsbakescakesimages/eastercake.png" alt="Easter Cake" class="rounded-lg" onclick="openImage(this.src)" />
-        <img src="natsbakescakesimages/halloweencupcake.png" alt="Halloween Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
-        <img src="natsbakescakesimages/stripecake.png" alt="Stripe Cake" class="rounded-lg" onclick="openImage(this.src)" />
-        <img src="natsbakescakesimages/sunflowercake.png" alt="Sunflower Cake" class="rounded-lg" onclick="openImage(this.src)" />
-        <img src="natsbakescakesimages/ukrainecupcakes.png" alt="Ukraine Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
-        <img src="natsbakescakesimages/washucake.png" alt="Wash U Cake" class="rounded-lg" onclick="openImage(this.src)" />
-        <img src="natsbakescakesimages/wrigleyfieldcake.png" alt="Wrigley Cake" class="rounded-lg" onclick="openImage(this.src)" />
+      <div class="mx-auto" style="width: 4.2in">
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 image-grid">
+          <img src="natsbakescakesimages/1989tvcake.png" alt="1989 TV Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/4thcake.png" alt="4th of July Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/4thicecreamcake.png" alt="Ice Cream Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/angiecake.png" alt="Angie Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/bavariancake.png" alt="Bavarian Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/cmccake.png" alt="CMC Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/collegecupcakes.png" alt="College Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/eastercake.png" alt="Easter Cake" class="rounded-lg" onclick="openImage(this.src)" />
+          <img src="natsbakescakesimages/halloweencupcake.png" alt="Halloween Cupcakes" class="rounded-lg" onclick="openImage(this.src)" />
+        </div>
       </div>
     </section>
+
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      function openImage(src) {
+        const win = window.open();
+        win.document.write(`<img src="${src}" style="width:100%" />`);
+      }
+    </script>
+  </body>
+</html>
 
     <!-- Meet Natalie Section -->
     <section id="meet" class="bg-blue-50 py-10 px-6">
