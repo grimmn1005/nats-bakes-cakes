@@ -37,13 +37,13 @@
         width: 80%;
         margin: 2rem auto;
         border-top: 5px dotted;
+        border-image: repeating-linear-gradient(90deg, #fcd34d 0 10px, #f9a8d4 10px 20px, #a5f3fc 20px 30px, #fcd34d 30px 40px) 1;
         border-color: transparent;
-        border-image: repeating-linear-gradient(90deg, #FDFD96 0 10px, #f9a8d4 10px 20px, #a5f3fc 20px 30px, #FDFD96 30px 40px) 1;
         height: 0;
       }
     </style>
   </head>
-  <body class="bg-gradient-to-b from-[#FDFD96] to-white font-sans text-gray-800">
+  <body class="bg-[#FDFD96] font-sans text-gray-800">
     <!-- Navigation -->
     <nav class="bg-[#FDFD96] py-4 shadow-md">
       <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
@@ -75,9 +75,9 @@
     <div class="divider"></div>
 
     <!-- Gallery Section (title and grid together) -->
-    <section id="gallery" class="text-center py-5">
-      <h2 class="text-3xl font-bold mb-5">🎂 Gallery</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 image-grid w-[4.75in] mx-auto">
+    <section id="gallery" class="text-center py-6">
+      <h2 class="text-3xl font-bold mb-6">🎂 Gallery</h2>
+      <div class="grid grid-cols-2 gap-4 image-grid mx-auto" style="width:4.2in;">
         <img src="natsbakescakesimages/1989tvcake.png" alt="1989 TV Cake" class="rounded-lg" onclick="openImage(this.src)" />
         <img src="natsbakescakesimages/4thcake.png" alt="4th of July Cake" class="rounded-lg" onclick="openImage(this.src)" />
         <img src="natsbakescakesimages/4thicecreamcake.png" alt="Ice Cream Cake" class="rounded-lg" onclick="openImage(this.src)" />
@@ -96,7 +96,7 @@
     </section>
 
     <div class="divider"></div>
-
+    
     <!-- Meet Natalie Section -->
     <section id="meet" class="bg-blue-50 py-10 px-6">
       <div class="max-w-5xl mx-auto">
