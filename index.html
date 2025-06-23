@@ -1,79 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Nat's Bakes & Cakes</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #333;
-        }
-        header {
-            background-color: #f8e8e8;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            margin: 5px 0 0;
-            font-size: 1.2em;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            padding: 20px;
-        }
-        .gallery img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            font-size: 0.9em;
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nat's Bakes & Cakes</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #fff; color: #333; }
+    header { background-color: #f8e8e8; padding: 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 2.5em; }
+    header p { margin: 5px 0 0; font-size: 1.2em; }
+    .cover {
+      background-color: #fff0e0;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .cover h2 {
+      font-size: 2em;
+      color: #8b4513;
+    }
+    .cover img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    .cover p {
+      font-size: 1.1em;
+      color: #444;
+      margin-top: 10px;
+    }
+    .about {
+      padding: 40px 20px;
+      background-color: #f7f9fb;
+      color: #444;
+    }
+    .about h2 {
+      font-size: 2em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .about img {
+      float: right;
+      margin-left: 20px;
+      max-width: 200px;
+      border-radius: 8px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+    }
+    .gallery img {
+      max-width: 200px;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact {
+      padding: 40px 20px;
+      background-color: #f7f9fb;
+      color: #444;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .contact img {
+      max-width: 300px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    .contact p {
+      margin: 5px 0;
+    }
+    .contact .notice {
+      background-color: #e0f7ff;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Nat's Bakes & Cakes 🍰</h1>
-        <p>Summer 2025 custom cupcake & cake orders.</p>
-    </header>
-    <div class="gallery">
-        <img src="natsbakescakesimages/1989tvcake.png" alt="1989 TV cake">
-        <img src="natsbakescakesimages/4thcake.png" alt="4th of July cake">
-        <img src="natsbakescakesimages/4thicecreamcake.png" alt="Ice cream cake">
-        <img src="natsbakescakesimages/angiecake.png" alt="Angie birthday cake">
-        <img src="natsbakescakesimages/bavariancake.png" alt="Bavarian cake">
-        <img src="natsbakescakesimages/cmccake.png" alt="CMC cake">
-        <img src="natsbakescakesimages/collegecupcakes.png" alt="College cupcakes">
-        <img src="natsbakescakesimages/eastercake.png" alt="Easter cake">
-        <img src="natsbakescakesimages/halloweencupcake.png" alt="Halloween cupcakes">
-        <img src="natsbakescakesimages/negheadshot.png" alt="Natalie headshot">
-        <img src="natsbakescakesimages/ngcakesinsta.png" alt="Instagram screenshot">
-        <img src="natsbakescakesimages/ohiostatecake.png" alt="Ohio State cake">
-        <img src="natsbakescakesimages/stripecake.png" alt="Stripe cake">
-        <img src="natsbakescakesimages/sunflowercake.png" alt="Sunflower cake">
-        <img src="natsbakescakesimages/ukrainecupcakes.png" alt="Ukraine cupcakes">
-        <img src="natsbakescakesimages/washucake.png" alt="WashU cake">
-        <img src="natsbakescakesimages/wrigleyfieldcake.png" alt="Wrigley Field cake">
-        <img src="natsbakescakesimages/xocupcake.png" alt="XO cupcakes">
+  <header>
+    <h1>Nat's Bakes & Cakes 🍰</h1>
+    <p>Summer 2025 custom cupcake &amp; cake orders.</p>
+  </header>
+
+  <section class="cover">
+    <h2>Sweet artistry baked fresh in every batch</h2>
+    <img src="natsbakescakesimages/xocupcake.png" alt="Chi O Cupcakes" />
+    <p>Custom cakes and cupcakes made with love for your special occasions</p>
+  </section>
+
+  <section class="about">
+    <h2>👩‍🍳 Meet Natalie</h2>
+    <img src="natsbakescakesimages/negheadshot.png" alt="Natalie Headshot" />
+    <p>I'm currently a junior in college on the pre-med track, but baking has always been my creative outlet. Inspired by a childhood babysitter, I started experimenting with cupcakes back in elementary school and never stopped.</p>
+    <p>In high school I was a founder and president of a baking club (Cupcakes For Creators), and I've supplied cupcakes for numerous fundraising events since then. This summer I'm turning my passion into a side-hustle—pouring heart (and plenty of buttercream) into personalized cupcakes and cakes that make every celebration a little sweeter.</p>
+    <p>From birthday parties to graduation celebrations, I love creating custom designs that reflect your unique style and taste preferences. Every order is made fresh with premium ingredients and decorated with meticulous attention to detail.</p>
+  </section>
+
+  <div class="gallery">
+    <img src="natsbakescakesimages/1989tvcake.png" alt="1989 TV Cake">
+    <img src="natsbakescakesimages/4thcake.png" alt="4th of July Cake">
+    <img src="natsbakescakesimages/4thicecreamcake.png" alt="4th Ice Cream Cake">
+    <img src="natsbakescakesimages/angiecake.png" alt="Angie Cake">
+    <img src="natsbakescakesimages/bavariancake.png" alt="Bavarian Cake">
+    <img src="natsbakescakesimages/cmccake.png" alt="CMC Cake">
+    <img src="natsbakescakesimages/collegecupcakes.png" alt="College Cupcakes">
+    <img src="natsbakescakesimages/eastercake.png" alt="Easter Cake">
+    <img src="natsbakescakesimages/halloweencupcake.png" alt="Halloween Cupcakes">
+    <img src="natsbakescakesimages/ohiotatecake.png" alt="Ohio State Cake">
+    <img src="natsbakescakesimages/stripecake.png" alt="Striped Cake">
+    <img src="natsbakescakesimages/sunflowercake.png" alt="Sunflower Cake">
+    <img src="natsbakescakesimages/ukrainecupcakes.png" alt="Ukraine Cupcakes">
+    <img src="natsbakescakesimages/washucake.png" alt="WashU Cake">
+    <img src="natsbakescakesimages/wrigleyfieldcake.png" alt="Wrigley Field Cake">
+    <img src="natsbakescakesimages/xocupcake.png" alt="XO Cupcake">
+  </div>
+
+  <section class="contact">
+    <h2>📧 Reach Out & Inquire</h2>
+    <img src="natsbakescakesimages/ngcakesinsta.png" alt="Instagram contact screenshot">
+    <p><strong>Text Message</strong><br>(203) 945-8014</p>
+    <p><strong>Instagram DM</strong><br>@nats_bakes_cakes</p>
+    <p><strong>Email</strong><br>negrimm1005@gmail.com</p>
+    <div class="notice">
+      🕐 <strong>Planning ahead?</strong> Kindly give at least <strong>5 days' notice</strong> so I can perfect your order!
     </div>
-    <footer>
-        &copy; 2025 Nat's Bakes & Cakes
-    </footer>
+  </section>
+
+  <footer>
+    &copy; 2025 Nat's Bakes & Cakes
+  </footer>
 </body>
 </html>
