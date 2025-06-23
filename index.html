@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nat's Bakes & Cakes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.05rem;
         background-color: #FFFFF0;
+      }
+      h1.text-4xl {
+        font-family: 'Bubblegum Sans', cursive;
       }
       .image-grid img {
         cursor: pointer;
@@ -36,7 +43,7 @@
         box-shadow: 0 2px 4px rgba(0,0,0,0.2);
       }
       .divider {
-        width: 80%;
+        width: 100%;
         margin: 2rem auto;
         border-top: 5px dotted;
         border-color: transparent;
@@ -64,29 +71,28 @@
     </style>
   </head>
   <body class="font-sans text-gray-800">
-    <!-- Navigation -->
-    <nav class="bg-[#FFFFF0] py-4 shadow-md">
-      <div class="max-w-5xl mx-auto px-4 flex items-center justify-between">
-        <h1 class="text-xl font-bold">🍰 Nat's Bakes & Cakes</h1>
-        <div class="md:hidden">
-          <button id="menuBtn" class="focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-        <div id="navLinks" class="hidden md:flex space-x-4">
+
+    <!-- Navigation (Mobile-Friendly) -->
+    <nav class="bg-[#FDFD96] py-4 shadow-md">
+      <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
+        <h1 class="text-xl font-bold flex items-center">🍰 Nat's Bakes & Cakes</h1>
+        <div class="hidden md:flex space-x-4">
           <a href="#gallery" class="hover:underline">Gallery</a>
           <a href="#meet" class="hover:underline">Meet Natalie</a>
           <a href="#orderform" class="hover:underline">Order Form</a>
           <a href="#contact" class="hover:underline">Contact</a>
         </div>
+        <button id="menuBtn" class="md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
-      <div id="mobileMenu" class="md:hidden hidden flex-col items-start px-4 pt-2 pb-4 space-y-2">
-        <a href="#gallery" class="block hover:underline">Gallery</a>
-        <a href="#meet" class="block hover:underline">Meet Natalie</a>
-        <a href="#orderform" class="block hover:underline">Order Form</a>
-        <a href="#contact" class="block hover:underline">Contact</a>
+      <div id="mobileMenu" class="md:hidden hidden flex-col px-4 space-y-2">
+        <a href="#gallery" class="hover:underline">Gallery</a>
+        <a href="#meet" class="hover:underline">Meet Natalie</a>
+        <a href="#orderform" class="hover:underline">Order Form</a>
+        <a href="#contact" class="hover:underline">Contact</a>
       </div>
     </nav>
 
@@ -98,11 +104,11 @@
 
     <!-- Hero Section -->
     <section class="text-center py-8">
-      <h2 class="text-2xl font-bold text-yellow-700 mb-4">Sweet artistry baked fresh in every batch</h2>
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">Sweet artistry baked fresh in every batch</h2>
       <div class="flex justify-center">
         <img src="natsbakescakesimages/xocupcake.png" alt="Cupcakes" class="rounded-xl w-2/3 max-w-md h-auto object-contain" />
       </div>
-      <p class="mt-4 text-sm">Custom cakes and cupcakes made with love for your special occasions</p>
+      <p class="mt-4 text-base">Custom cakes and cupcakes made with love for your special occasions</p>
     </section>
 
     <div class="divider"></div>
@@ -175,7 +181,7 @@
 
     <footer class="text-center text-sm py-6 text-gray-500">© 2025 Nat's Bakes & Cakes</footer>
 
-    <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to Top</button>
+       <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to Top</button>
 
     <script>
       const menuBtn = document.getElementById('menuBtn');
@@ -193,5 +199,6 @@
         document.getElementById('backToTopBtn').style.display = window.scrollY > 300 ? 'block' : 'none';
       };
     </script>
+
   </body>
 </html>
